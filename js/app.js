@@ -20,7 +20,16 @@ class InvoicePDFGenerator {
     this.pdf.text(`Date: ${this.invoice.date}`, 10, 20);
     this.pdf.text(`Total: $${this.invoice.total}`, 10, 30);
     this.pdf.save("mydoc.pdf");
+
+    pdf.text("Company: Sallys Shellies", 10, y);
+    const customerName = document.getElementById("custName").value;
+    const customerEmail = document.getElementById("email").value;
+    pdf.text(`Customer: ${customerName}`, 10, y);
+    y += 10;
+    pdf.text(`Email: ${customerEmail}`, 10, y);
+    y += 20;
   }
+
   downloadPdf() {
     this.pdfDoc.save("mydoc.pdf");
   }

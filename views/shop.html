@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop Page</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="/views/index.html">Sallys Shellies</a>
+      <a href="/views/shop.html">Shop</a>
+      <a href="#">About</a>
+    </nav>
+    <table>
+      <tr>
+        <th>seashell earings |</th>
+        <th>$12.99</th>
+        <th>
+          <button class="btn" onclick="addToCart('Seashell Earrings', 12.99)">
+            Add to Cart
+          </button>
+        </th>
+      </tr>
+      <tr>
+        <th>coral necklaces |</th>
+        <th>$25.99</th>
+        <th>
+          <button class="btn" onclick="addToCart('coral necklaces', 25.99)">
+            Add to Cart
+          </button>
+        </th>
+      </tr>
+      <tr>
+        <th>jellyfish hair clips |</th>
+        <th>$8.99</th>
+        <th>
+          <button
+            class="btn"
+            id="cart"
+            onclick="addToCart('jellyfish hair clips', 8.99)"
+          >
+            Add to Cart
+          </button>
+        </th>
+      </tr>
+    </table>
+    <input type="text" id="custName" placeholder="Enter your name" />
+    <input type="email" id="email" placeholder="Enter your email" />
+    <button class="btn" id="view" onclick="viewInvoice()">View Invoice</button>
+    <button class="btn" id="download" onclick="downloadInvoice()">
+      download Invoice
+    </button>
+    <script src="/js/app.js"></script>
+  </body>
+</html>
